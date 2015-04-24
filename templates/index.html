@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Redis 测试页面</title>
+</head>
+<body>
+<form method="post" action="/getback/">
+    <input name="key" type="text"/>
+    <input name="value" type="text">
+    <input type="submit">
+</form>
+<a href="/setvalue/">redis写入</a>
+<a href="/getvalue/">redis读取</a>
+<a href="/delvalue/">redis删除</a>
+<a href="/listvalue/">redis的List</a>
+<a href="/mapvalue/">redis的Map</a>
+<p>reslut : {{ reslut }}</p>
+</body>
+</html>
