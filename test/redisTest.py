@@ -21,7 +21,8 @@ class MyTestCase(unittest.TestCase):
         # print r.lpop('lists')
 
 
-        r.hset('infos', 'man', 'Jasper')
+        r.hset(
+            'infos', 'man', 'Jasper')
         r.hset('infos', 'age', 11)
         print r.hget('infos', 'man')
         print r.hget('infos', 'age')
