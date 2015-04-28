@@ -65,12 +65,17 @@ class MyTestCase(unittest.TestCase):
         # res = collection.remove({'name': 'Jasper'})
         # print "-----------------------------------"
         # print res['ok']
+        # x = []
         # for c in collection.find().batch_size(500):
-        #      print c
+        #     x.append(c)
+        # print x
         post = {'name': 'xxxxxxxxx', 'age': 21, 'sex': '男'}
-        collection.save(post)
-        for c in collection.find().batch_size(500):
-            print c
+        csave = collection.save(post)
+        print csave
+
+        # for c in collection.find().batch_size(500):
+        #     print c
+        # collection.find_one({'name': 'Jasper'})
 
 if __name__ == '__main__':
     unittest.main()

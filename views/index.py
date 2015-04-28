@@ -15,7 +15,7 @@ def getback(request):
     k = request.POST['key']
     v = request.POST['value']
     r.set(k, v)
-    return render(request, 'index.html', {'reslut': 'Key''=' + k + 'Value=' + r.get(k)})
+    return render(request, 'index.html', {'reslut': 'Key= ' + k + 'Value= ' + r.get(k)})
 
 
 def setvalue(request):
@@ -24,7 +24,10 @@ def setvalue(request):
     r.set('redis3', 'myredis3')
     r.set('redis4', 'myredis4')
     r.set('redis5', 'myredis5')
-    return render(request, 'index.html', {'reslut': 'redis=' + r.get('redis') + 'redis2=' + r.get('redis2') + 'redis3=' + r.get('redis3') + 'redis4=' + r.get('redis4') + 'redis5=' + r.get('redis5')})
+    return render(request, 'index.html', {
+    'reslut': 'redis=' + r.get('redis') +'\n'+ 'redis2=' + r.get('redis2') +'\n'+ 'redis3=' + r.get('redis3') +'\n'+ 'redis4=' + r.get(
+        'redis4') +'\n'+ 'redis5=' + r.get('redis5')})
+
 
 def getvalue(request):
     print r.get('redis')
@@ -33,9 +36,9 @@ def getvalue(request):
     print r.get('redis4')
     print r.get('redis5')
     return render(request, 'index.html', {
-        'reslut': 'redis=' + r.get('redis') + 'redis2=' + r.get('redis2') + 'redis3=' + r.get(
-            'redis3') + 'redis4=' + r.get(
-            'redis4') + 'redis5=' + r.get('redis5')})
+        'reslut': 'redis=' + r.get('redis') +'\n'+ 'redis2=' + r.get('redis2') +'\n'+ 'redis3=' + r.get(
+            'redis3') +'\n'+ 'redis4=' + r.get(
+            'redis4') +'\n'+'redis5=' + r.get('redis5')})
 
 
 def delvalue(request):

@@ -47,9 +47,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'TestRedis.urls'
+ROOT_URLCONF = 'TestNoSQL.urls'
 
-WSGI_APPLICATION = 'TestRedis.wsgi.application'
+WSGI_APPLICATION = 'TestNoSQL.wsgi.application'
 
 
 # Database
